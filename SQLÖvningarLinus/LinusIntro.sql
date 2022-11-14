@@ -1,9 +1,11 @@
-/*CREATE TABLE DjurDB(
+CREATE DATABASE DjurDb;
+
+CREATE TABLE DjurTbl(
 	Id int PRIMARY KEY,
 	Namn NVARCHAR(max) not null
 );
 
-INSERT INTO DjurDB([Id], [Namn])
+INSERT INTO DjurTbl([Id], [Namn])
 VALUES 
 	(1, 'Hamster'),
 	(2, 'Hund'),
@@ -11,12 +13,16 @@ VALUES
 	(4, 'Kanin');
 
 SELECT * 
-FROM DjurDb 
+FROM DjurTbl 
 WHERE [Namn] LIKE '%a%';
 
-DROP TABLE DjurDb;
+DROP TABLE DjurTbl;
 
-CREATE TABLE KlassenDb(
+DROP DATABASE DjurDb;
+
+CREATE DATABASE KlassenDb;
+
+CREATE TABLE KlassenTbl(
 	Id int Primary Key,
 	Förnamn nvarchar(max) not null,
 	Efternamn nvarchar(max) not null,
@@ -24,11 +30,11 @@ CREATE TABLE KlassenDb(
 	Hemort nvarchar(max) not null
 );
 
-INSERT INTO KlassenDb([Id], [Förnamn], [Efternamn], [Ålder], [Hemort])
+INSERT INTO KlassenTbl([Id], [Förnamn], [Efternamn], [Ålder], [Hemort])
 VALUES 
 	(1, 'Andreas',' Nordfeldt', 31, 'Hisingen'),
 	(2, 'Jing',' Leng', 27, 'Hisingen'),
 	(3, 'Johannes',' Fredriksson', 37, 'Frölunda'),
-	(4, 'Linus',' Fjellström', 30, 'Mölndal'); */
+	(4, 'Linus',' Fjellström', 30, 'Mölndal'); 
 
 SELECT * FROM KlassenDb;
