@@ -1,5 +1,7 @@
 CREATE DATABASE DjurDb;
 
+USE DjurDb;
+
 CREATE TABLE DjurTbl(
 	Id int PRIMARY KEY,
 	Namn NVARCHAR(max) not null
@@ -16,11 +18,13 @@ SELECT *
 FROM DjurTbl 
 WHERE [Namn] LIKE '%a%';
 
+CREATE DATABASE KlassenDb;
+
+USE KlassenDb;
+
 DROP TABLE DjurTbl;
 
 DROP DATABASE DjurDb;
-
-CREATE DATABASE KlassenDb;
 
 CREATE TABLE KlassenTbl(
 	Id int Primary Key,
@@ -35,6 +39,6 @@ VALUES
 	(1, 'Andreas',' Nordfeldt', 31, 'Hisingen'),
 	(2, 'Jing',' Leng', 27, 'Hisingen'),
 	(3, 'Johannes',' Fredriksson', 37, 'Frölunda'),
-	(4, 'Linus',' Fjellström', 30, 'Mölndal'); 
+	(4, 'Linus',' Fjellström', 30, 'Mölndal');
 
-SELECT * FROM KlassenDb;
+SELECT * FROM KlassenTbl;
